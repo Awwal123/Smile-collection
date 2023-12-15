@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>SMILE GLAM COLLECTION</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="external.css">
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -13,21 +13,43 @@
     
 </head>
 <body>
+  <nav>
     <div class="wrapper">
-    <header>
-        <h1 class="biggest-heading">SMILE COLLECTION</h1>
-        <nav>
-            <!-- <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul> -->
-        </nav>
-    </header>
+      <div class="nav">
+        <!-- Logo -->
+        <img src="./images/logo.jpg" alt="Logo"  width="60px"/>
+        <!-- Hamburger -->
+        <button id="hamburger" type="button" onclick="toggleHambuger()">
+          <img src="./images/icon-hamburger.svg" alt="Hamburger" id="hamburger_icon" />
+        </button>
+        <!-- links -->
+        <div class="links">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+        </div>
+        <button class="request" type="button">Request Invite</button>
+      </div>
+    </div>
+  </nav>
+  <!-- Mobile navigation -->
+  <div id="mobile_nav">
+    <div class="mobile-links">
+      <a href="#">Home</a>
+      <a href="#">Sneakers</a>
+      <a href="#">Cloths</a>
+      <a href="#">Shoes</a>
+      <a href="#">Rings</a>
+      <a href="#">Contact Us</a>
+      <a href="#">About Us</a>
+    </div>
+  </div>  
 
     <section id="home">
-        <h2 >Welcome to our Fashion<br> Store</h2>
+        
+        <h1 class="biggest-heading">Welcome to our FashionStore</h1>
         <!-- Add any promotional content here -->
         <p class="first-p">Elevate Your Wardrobe with Our Exclusive Collection 
         and Explore the Latest Trends in<br> Clothing, Shoes, and More!</p>
@@ -76,19 +98,19 @@
       </div>
     </section>
 
-    <section id="about">
+    <!-- <section id="about">
         <h2>About Us</h2>
         <p class="about">At SMILE COLLECTION we believe that fashion is an art form. Our curated 
           collection of clothes, shoes, caps, and more is a testament to the ever-evolving tapestry of trends while embracing the enduring allure of timeless elegance.
            From casual comfort to runway-ready chic, we've got your style covered.</p>
-    </section>
+    </section> -->
 
-    <section id="contact">
+    <!-- <section id="contact">
         <h2>Contact Us on Whatsapp for more products:</h2>
         <p>Whatsapp: <a href="https://wa.me/9133444031" target="_">SMILE COLLECTION</a></p>
         <p>Email us at: your@email.com</p>
         <p></p>
-    </section>
+    </section> -->
     <!-- Your website content here -->
 
     <!-- <footer>
@@ -136,6 +158,25 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+</script>
+<script>
+  const mobile_nav = document.getElementById("mobile_nav");
+  const hamburger_icon = document.getElementById("hamburger_icon");
+  console.log(mobile_nav)
+
+  mobile_nav.style.display = "none"
+  // hamburger_icon
+  function toggleHambuger() {
+   
+   if (mobile_nav.style.display == "none"){
+    mobile_nav.style.display = "block";
+    // hamburger_icon.setAttribute("src", "./images/icon-close.svg");
+    hamburger_icon.setAttribute('src', './images/icon-close.svg')
+   } else {
+    mobile_nav.style.display = "none"
+   }
+   
+  }
 </script>
 </body>
 </html>
